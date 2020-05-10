@@ -1,0 +1,186 @@
+// Breakpoints
+$bp320: 320px;
+$bp350: 350px;
+$bp400: 400px;
+$bp500: 500px;
+$bp600: 600px;
+$bp700: 700px;
+$bp800: 800px;
+$bp850: 850px;
+$bp900: 900px;
+$bp1000: 1000px;
+$bp1100: 1100px;
+$bp1200: 1200px;
+$bp1300: 1300px;
+$bp1400: 1400px;
+$bp1500: 1500px;
+$bp1600: 1600px;
+$bp1700: 1700px;
+$bp1900: 1900px;
+
+// Ranges starting form a breakpoint
+$up320: (
+  min: $bp320,
+);
+$up350: (
+  min: $bp350,
+);
+$up400: (
+  min: $bp400,
+);
+$up500: (
+  min: $bp500,
+);
+$up600: (
+  min: $bp600,
+);
+$up700: (
+  min: $bp700,
+);
+$up800: (
+  min: $bp800,
+);
+$up900: (
+  min: $bp900,
+);
+$up1000: (
+  min: $bp1000,
+);
+$up1100: (
+  min: $bp1100,
+);
+$up1200: (
+  min: $bp1200,
+);
+$up1300: (
+  min: $bp1300,
+);
+$up1400: (
+  min: $bp1400,
+);
+$up1500: (
+  min: $bp1500,
+);
+$up1600: (
+  min: $bp1600,
+);
+$up1700: (
+  min: $bp1700,
+);
+$up1900: (
+  min: $bp1900,
+);
+
+// Ranges between breakpoints
+$range320-400: (
+  min: $bp320,
+  max: #{$bp400 - 1},
+);
+
+$range500-600: (
+  min: $bp500,
+  max: #{$bp600 - 1}
+);
+
+$range600-700: (
+  min: $bp600,
+  max: #{$bp700 - 1},
+);
+
+$range700-800: (
+  min: $bp700,
+  max: #{$bp800 - 1},
+);
+
+$range700-900: (
+  min: $bp700,
+  max: #{$bp900 - 1},
+);
+
+$range800-1000: (
+  min: $bp800,
+  max: #{$bp1000 - 1},
+);
+
+$range850-1000: (
+  min: $bp850,
+  max: #{$bp1000 - 1},
+);
+
+$range800-1500: (
+  min: $bp800,
+  max: #{$bp1500 - 1},
+);
+
+$range900-1100: (
+  min: $bp900,
+  max: #{$bp1100 - 1},
+);
+
+$range1000-1200: (
+  min: $bp1000,
+  max: #{$bp1200 - 1},
+);
+
+$range1100-1300: (
+  min: $bp1100,
+  max: #{$bp1300 - 1},
+);
+
+$range1100-1400: (
+  min: $bp1100,
+  max: #{$bp1400 - 1},
+);
+
+// Ranges up to a breakpoint
+$down320: (
+  max: #{$bp320 - 1},
+);
+$down350: (
+  max: #{$bp350 - 1},
+);
+$down400: (
+  max: #{$bp400 - 1},
+);
+$down500: (
+  max: #{$bp500 - 1},
+);
+$down600: (
+  max: #{$bp600 - 1},
+);
+$down700: (
+  max: #{$bp700 - 1},
+);
+$down800: (
+  max: #{$bp800 - 1},
+);
+$down900: (
+  max: #{$bp900 - 1},
+);
+$down1000: (
+  max: #{$bp1000 - 1},
+);
+$down1100: (
+  max: #{$bp1100 - 1},
+);
+$down1200: (
+  max: #{$bp1200 - 1},
+);
+$down1300: (
+  max: #{$bp1300 - 1},
+);
+$down1400: (
+  max: #{$bp1400 - 1},
+);
+$down1500: (
+  max: #{$bp1500 - 1},
+);
+$down1600: (
+  max: #{$bp1600 - 1},
+);
+$down1700: (
+  max: #{$bp1700 - 1},
+);
+$down1900: (
+  max: #{$bp1900 - 1},
+);
