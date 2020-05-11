@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.scss";
+import CompA from "./components/compA";
+import CompB from "./components/compB";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <CompA />
+      <CompB />
     </div>
   );
 }
