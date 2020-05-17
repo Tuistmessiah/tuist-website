@@ -11,10 +11,10 @@ Icon.propTypes = {
   type: oneOf(Object.keys(icons)).isRequired,
 };
 
-function Icon({ type, ...rest }) {
+function Icon({ type, fill, ...rest }) {
   const IconComp = icons[type];
   if (!type || type === "") return null;
-  return <IconComp {...rest} />;
+  return <IconComp {...rest} fill={fill} />;
 }
 
 export default Icon;

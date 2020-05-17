@@ -2,6 +2,8 @@
 import React from "react";
 
 function Arrow({ ...props }) {
+  const fill = props.fill || "#FFF";
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +17,7 @@ function Arrow({ ...props }) {
           y2="26"
           transform="translate(29.5 807.5)"
           fill="none"
-          stroke="#fff"
+          stroke={fill}
           strokeLinecap="round"
           strokeWidth="1"
         />
@@ -24,7 +26,7 @@ function Arrow({ ...props }) {
           y2="7"
           transform="translate(23.5 826.5)"
           fill="none"
-          stroke="#fff"
+          stroke={fill}
           strokeLinecap="round"
           strokeWidth="1"
         />
@@ -33,7 +35,7 @@ function Arrow({ ...props }) {
           y2="7"
           transform="translate(29.5 826.5)"
           fill="none"
-          stroke="#fff"
+          stroke={fill}
           strokeLinecap="round"
           strokeWidth="1"
         />
