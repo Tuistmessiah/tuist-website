@@ -1,9 +1,10 @@
 import React from "react";
+import HeroSection from "../sections/HeroSection/HeroSection";
 
 function Homepage() {
   return (
     <div className="App">
-      <p>Hello World</p>
+      <HeroSection />
     </div>
   );
 }
