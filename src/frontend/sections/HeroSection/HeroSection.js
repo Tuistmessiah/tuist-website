@@ -1,20 +1,16 @@
 import React from "react";
+import Button from "../../components/Button/Button";
 import style from "./heroSection.module.scss";
 
-function HeroSection({ image = null, title = null, label = null }) {
-  //const imageUrl = image || null; // TODO: Use this once DB is finished
-  const imageUrl = "/images/tuist1.png";
-  title = "Tuna Universitária do Instituto Superior Técnico";
-  label = "Vem descobrir";
-
+function HeroSection({ image = null, title = null, cta = null }) {
   return (
     <section
       className={style.heroSection}
-      style={{ background: imageUrl ? `url(${imageUrl})` : null }}
+      style={{ background: image ? `url(${image})` : null }}
     >
       <div className={style.wrapper}>
         {title && <h1 className={style.title}>{title}</h1>}
-        {label && <p className={style.label}>{label}</p>}
+        <div className={style.button}>{cta && <Button {...cta} />}</div>
       </div>
     </section>
   );

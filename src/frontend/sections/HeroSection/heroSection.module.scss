@@ -41,8 +41,6 @@
     line-height: 5.6rem; 
 }
 
-.label {
-    @include font(montserratBold);
-    font-size: 2.2rem;
+.button {
     margin-top: 3rem;  
 }
