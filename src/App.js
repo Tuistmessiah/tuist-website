@@ -1,6 +1,5 @@
 import React from "react";
 import Homepage from "./frontend/pages/Homepage";
-import "./App.scss";
 import "./frontend/scss/global.scss";
 
 function App() {
