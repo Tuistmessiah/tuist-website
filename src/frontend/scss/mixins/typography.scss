@@ -1,0 +1,70 @@
+@mixin font($type: roboto) {
+  // Montserrat
+  @if $type == montserratBlack {
+    font-family: $montserrat-black;
+    font-weight: normal;
+    font-style: normal;
+  }
+  @if $type == montserratBold {
+    font-family: $montserrat-bold;
+    font-weight: normal;
+    font-style: normal;
+  } 
+  @if $type == montserratExtraBold {
+    font-family: $montserrat-extrabold;
+    font-weight: normal;
+    font-style: normal;
+  }
+  @if $type == montserratItalic {
+    font-family: $montserrat-italic;
+    font-weight: normal; 
+    font-style: normal;
+  }
+  @if $type == montserratLight {
+    font-family: $montserrat-light;
+    font-weight: normal;
+    font-style: normal;
+  }
+  @if $type == montserratMedium {
+    font-family: $montserrat-medium;
+    font-weight: normal;
+    font-style: normal;
+  }
+  @if $type == montserratRegular {
+    font-family: $montserrat-regular;
+    font-weight: normal;
+    font-style: normal;
+  }  
+  @if $type == montserratSemibold {
+    font-family: $montserrat-semibold;
+    font-weight: normal; 
+    font-style: normal;
+  }  
+  
+  // Roboto
+  @if $type == robotoBold {
+    font-family: $roboto-bold;
+    font-weight: normal;
+    font-style: normal;
+  }
+  @if $type == robotoBoldItalic {
+    font-family: $roboto-bold-italic;
+    font-weight: normal;
+    font-style: normal;
+  }
+  @if $type == robotoLight {
+    font-family: $roboto-light;
+    font-weight: normal;
+    font-style: normal;
+  }
+  @if $type == robotoLightItalic {
+    font-family: $roboto-light-italic; 
+    font-weight: normal;
+    font-style: normal;
+  }
+  @if $type == robotoRegular {
+    font-family: $roboto-regular;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
