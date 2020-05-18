@@ -1,0 +1,42 @@
+@import 'src/frontend/scss/imports';
+
+.container {
+    &,
+    &:link,
+    &:visited {
+        background-color: $blue1;  
+        color: $white;
+        max-width: 23rem;
+        padding: 1.5rem 1.6rem; 
+        border-radius: 1rem;
+        @include flex();
+        text-transform: uppercase;
+        transition: all 250ms;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($black, 0.2); 
+
+        & .icon {
+            transform: rotate(-90deg) translateY(1rem);
+        }
+    }
+
+    &:active {
+        outline: none;
+        transform: translateY(0px); 
+        box-shadow: 0 0.5rem 1rem rgba($black, 0.2); 
+    }
+}
+
+.label {
+    @include font(montserratMedium);        
+    font-size: 1.6rem;
+    margin-right: 2rem;
+}
+
+.icon {
+    transform: rotate(-90deg);
+    transition: all 250ms;
+}
