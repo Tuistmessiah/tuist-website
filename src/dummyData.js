@@ -1,5 +1,5 @@
 export const heroSection = {
-  image: "/images/tuist1.png",
+  image: "https://i.imgur.com/MH9quRL.jpg",
   title: "Tuna Universitária do Instituto Superior Técnico",
   cta: {
     label: "Vem descobrir",
