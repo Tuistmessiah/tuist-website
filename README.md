@@ -1,3 +1,19 @@
+# Adding sections
+
+Since content is dynamic, the backend should always have the required data to render each section. In case it doesn't, the sections should show a defualt component showing the user a non intrusive message explaining no data exists. The app is arquitected to fetch all data and meta data relevant on a page start and for that page. So any addition of a section in the DB will already appear in that same object fetched for the page.
+
+So when adding a new section to the app, the developer should:
+
+- (React) Create new section component and make a data model of its contents (in JSON form)
+- (Backoffice) Add a 'section' entry in the DB with that JSON, with the respective 'page' and 'section' (this is important because this data will come already with the data fetched on page start)
+- Pass, through props, all data needed from the object fetched on the page start. Always protect the sections against unfetched data.
+
+### DB considerations
+
+Whenever possible, `mockData/sections` in the backend should reflect also changes in the frontend code. This allows for frontend development using a local database to show all UX content in an appropriate way. Not crucial though.
+
+# React Documentation
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
