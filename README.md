@@ -5,7 +5,7 @@ Since content is dynamic, the backend should always have the required data to re
 So when adding a new section to the app, the developer should:
 
 - (React) Create new section component and make a data model of its contents (in JSON form)
-- (Backoffice) Add a 'section' entry in the DB with that JSON, with the respective 'page' and 'section' (this is important because this data will come already with the data fetched on page start)
+- (Backoffice) Add a 'section' entry in the DB with that JSON, with the respective 'page' and 'section' (this is important because this data will come already with the data fetched on page start). To maintain coherence, when adding a section component (e.g: HeroSection), call the 'section_name' value in the DB the same as the section name, all letter lowercases (e.g: 'hero').
 - Pass, through props, all data needed from the object fetched on the page start. Always protect the sections against unfetched data.
 
 ### DB considerations
