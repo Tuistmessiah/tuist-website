@@ -1,6 +1,7 @@
 const BASE_URL = "http://www.tuistmessiah.com/nether-api";
 const DEV_URL = "http://localhost:5000";
 // TODO: Choose BASE_URL based on environment
+// TODO: Improve Error logging on HTTP request
 
 const TUNO_ENTITY = "tuno";
 const SECTION_ENTITY = "section";
@@ -18,12 +19,15 @@ export function fitleredSectionsByPage(page_ref) {
   return fetchFromAPI(SECTION_ENTITY, `page/${page_ref}`, {
     method: "GET",
   })
-    .then((filteredArray) =>
-      filteredArray.map((section) => ({
+    .then((filteredArray) => {
+      if (!filteredArray) {
+        return [];
+      }
+      return filteredArray.map((section) => ({
         ...section,
         config: JSON.parse(section.config),
-      }))
-    )
+      }));
+    })
     .then((filteredArray) =>
       arrayToObject(filteredArray, "section_name", "config")
     );
