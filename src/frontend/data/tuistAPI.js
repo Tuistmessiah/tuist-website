@@ -1,13 +1,17 @@
-const BASE_URL = "http://www.tuistmessiah.com/nether-api";
-const DEV_URL = "http://localhost:5000";
+import auth from "./auth.json";
+
 // TODO: Choose BASE_URL based on environment
 // TODO: Improve Error logging on HTTP request
 
+const BASE_URL = auth.API_URL[auth.API_URL.auth_mode];
+const BASIC_TOKEN = auth.basicToken;
 const TUNO_ENTITY = "tuno";
 const SECTION_ENTITY = "section";
 const SOUND_ENTITY = "sound";
 
 // API Endpoints
+
+console.log({ BASE_URL });
 
 /* Tuno */
 export async function allTunos() {
@@ -36,7 +40,11 @@ export function fitleredSectionsByPage(page_ref) {
 // INTERNALS
 
 function fetchFromAPI(endpoint, url, { method, headers, body }) {
-  return fetch(`${DEV_URL}/${endpoint}/${url}`, { method, headers, body })
+  return fetch(`${BASE_URL}/${endpoint}/${url}`, {
+    method,
+    headers: { ...headers, basicToken: BASIC_TOKEN },
+    body,
+  })
     .then((response) => response.json())
     .then(logger)
     .then((responseJSON) => responseJSON.content)
@@ -52,6 +60,6 @@ function arrayToObject(array, indexVariable, valueVariable) {
 }
 
 function logger(response) {
-  console.info("Fetched:", response.message, response.content);
+  console.info("API fetch:", response.message, response.content);
   return response;
 }
